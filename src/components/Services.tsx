@@ -1,5 +1,4 @@
-
-import { GitMerge, Shield, Cloud, BarChart, HardDrive, Package2 } from "lucide-react";
+import { GitMerge, Shield, Cloud, BarChart, HardDrive, Package2, Code, Smartphone, Layers } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -11,7 +10,7 @@ const services = [
   {
     icon: <Cloud className="h-10 w-10" />,
     title: "Cloud Infrastructure Management",
-    description: "Scalable and secure AWS solutions tailored to your business needs."
+    description: "Scalable and secure AWS solutions."
   },
   {
     icon: <Shield className="h-10 w-10" />,
@@ -21,7 +20,7 @@ const services = [
   {
     icon: <BarChart className="h-10 w-10" />,
     title: "Monitoring & Logging",
-    description: "Stay ahead with real-time insights and analytics for your infrastructure."
+    description: "Stay ahead with real-time insights and analytics."
   },
   {
     icon: <HardDrive className="h-10 w-10" />,
@@ -31,7 +30,22 @@ const services = [
   {
     icon: <Package2 className="h-10 w-10" />,
     title: "Containerization & Orchestration",
-    description: "Enhance efficiency with Docker and Kubernetes implementations."
+    description: "Enhance efficiency with Docker and Kubernetes."
+  },
+  {
+    icon: <Code className="h-10 w-10" />,
+    title: "Web Development",
+    description: "Build high-performance, scalable web applications with modern frameworks."
+  },
+  {
+    icon: <Smartphone className="h-10 w-10" />,
+    title: "Mobile App Development",
+    description: "Create seamless, cross-platform mobile experiences for iOS & Android."
+  },
+  {
+    icon: <Layers className="h-10 w-10" />,
+    title: "Software Development",
+    description: "Develop robust, custom software solutions tailored to your business needs."
   }
 ];
 

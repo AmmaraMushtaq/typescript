@@ -8,9 +8,10 @@ const caseStudies = [
     title: "Etisalat",
     image: "/public/etisalat.png",
     link: "https://www.etisalat.ae/en/index.html",
-    about: "A telecom platform integrating mobile, TV, and digital products.",
-    did: "Managed large-scale cloud infrastructure, engineered CI/CD pipelines, and automated deployments using Bamboo, Docker, and CircleCI.",
+    about: "A telecom platform integrating mobile, TV, and digital products. ",
+    did: "Engineered scalable cloud infrastructure, automated CI/CD pipelines, and enhanced security hardening using Bamboo, Docker, CircleCI & AWS IAM. Also contributed to backend optimization for seamless service integration.",
     impact: "Reduced deployment times by 50%, enhanced infrastructure security, and achieved seamless integration of services, boosting operational efficiency.",
+
     bgClass: "bg-gradient-to-br from-blue-900/30 to-purple-900/30"
   },
    {
@@ -27,17 +28,19 @@ const caseStudies = [
     image: "/public/chronicle.png",
     link: "https://chroniclehq.com/",
     about: "A SaaS presentation tool enabling users to create interactive stories.",
-    did: "Automated CI/CD processes and optimized system performance through advanced cloud management.",
-    impact: "Enhanced platform stability, allowing users to build and share presentations with improved speed and reliability.",
+    did: " Developed full-stack solutions, optimized recommendation algorithms, and implemented server-side caching using React, TypeScript, Python, FastAPI, PostgreSQL, and AWS CloudFront. Automated deployment & monitoring for high availability.",
+    impact: " Increased user retention by improving content accessibility and recommendation accuracy.",
+
     bgClass: "bg-gradient-to-br from-orange-900/30 to-red-900/30"
   },
   {
     title: "Carbonite",
     image: "/public/carbonite.png",
     link: "https://www.carbonite.com/?srsltid=AfmBOooacsz1ReiJHZAfS32V1Ophy6rflnSNWX8zM4RLnoezqMjADaAw",
-    about: "A cybersecurity product by Opentext, designed to secure personal and business data.",
-    did: "Implemented advanced security practices, managed backend deployments, and ensured regulatory compliance using Linux, NGINX, and Docker.",
+    about: "A cybersecurity product by Opentext, designed to secure personal and business data. ",
+    did: "Strengthened security architecture, automated backend deployments, and ensured compliance using Linux, NGINX, Docker & Python. Also optimized system performance for better resilience.",
     impact: "Improved data security, ensured compliance, and enhanced product stability, contributing to greater client trust.",
+
     bgClass: "bg-gradient-to-br from-green-900/30 to-teal-900/30"
   },
  
@@ -46,7 +49,7 @@ const caseStudies = [
     image:  "/public/waveback.png",
     link:   "https://apps.apple.com/us/app/waveback/id1459273845",
     about: "A social platform connecting users based on shared activity interests.",
-    did: "Developed features that improved user engagement and facilitated smooth interactions within the community.",
+    did: "Engineered dynamic front-end experiences, optimized real-time interactions, and streamlined API performance using React, Next.js, WebSockets, Node.js, AWS Lambda & DynamoDB. Automated infrastructure management for scalability.",
     impact: "Contributed to increased platform adoption and enhanced community connections.",
     bgClass: "bg-gradient-to-br from-purple-900/30 to-pink-900/30"
   }

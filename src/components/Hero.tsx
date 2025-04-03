@@ -9,18 +9,17 @@ const Hero = () => {
           <div className="lg:w-1/2 space-y-8 animate-fade-in">
             {/* Tagline */}
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium tracking-wide animate-slide-down">
-              <span>DevOps & DevSecOps Expertise for Your Business</span>
+              <span>DevOps & Software Development Expertise for Your Business</span>
             </div>
             
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white animate-slide-down" style={{ animationDelay: "100ms" }}>
-              Streamline Your Business with Cutting-Edge DevOps Solutions
+            Streamline & Scale Your Business with Cutting-Edge DevOps, Cloud, & Software Solutions
             </h1>
             
             {/* Subtext */}
             <p className="text-lg md:text-xl text-white/80 max-w-2xl animate-slide-down" style={{ animationDelay: "200ms" }}>
-              I specialize in delivering robust, secure, and efficient cloud solutions on AWS, helping businesses optimize their operations and scale with confidence.
-            </p>
+            I deliver secure, scalable DevOps & DevSecOps solutions on AWS to optimize operations and enhance security. I also offer high-performance Web, Mobile, and Software Development services tailored to your needs.    </p>
             
             {/* CTA Button */}
             <div className="pt-4 animate-slide-down" style={{ animationDelay: "300ms" }}>

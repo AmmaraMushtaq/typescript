@@ -1,60 +1,68 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { CloudCog, GitMerge, Cloud, Shield, BarChart, HardDrive, Package2, Code, MoveRight, Activity, FileCheck } from "lucide-react";
-
+import { CloudCog, GitMerge, Cloud, Shield, BarChart, HardDrive, Package2, Code, MoveRight, Activity, FileCheck, Laptop, Smartphone } from "lucide-react";
 
 const servicesList = [
   {
-    icon: <GitMerge className="h-10 w-10" />,
-    title: "CI/CD Automation",
+    icon: <GitMerge className="h-10 w-10" />, 
+    title: "CI/CD Automation", 
     description: "Accelerate your development lifecycle with fully automated continuous integration and continuous deployment pipelines, reducing manual tasks and speeding up releases."
   },
   {
-    icon: <Cloud className="h-10 w-10" />,
-    title: "Cloud Infrastructure Management",
+    icon: <Cloud className="h-10 w-10" />, 
+    title: "Cloud Infrastructure Management", 
     description: "Design, deploy, and manage scalable cloud environments on AWS. I ensure your infrastructure is optimized for performance, security, and cost-efficiency."
   },
   {
-    icon: <Shield className="h-10 w-10" />,
-    title: "Security Hardening (DevSecOps)",
+    icon: <Shield className="h-10 w-10" />, 
+    title: "Security Hardening (DevSecOps)", 
     description: "Implement advanced security measures to safeguard your applications and data. My approach integrates security into every step of the development lifecycle."
   },
   {
-    icon: <BarChart className="h-10 w-10" />,
-    title: "Monitoring & Logging",
+    icon: <BarChart className="h-10 w-10" />, 
+    title: "Monitoring & Logging", 
     description: "Set up robust monitoring and logging solutions to gain real-time insights into your systems. Proactive monitoring helps in identifying issues before they impact your business."
   },
   {
-    icon: <HardDrive className="h-10 w-10" />,
-    title: "Disaster Recovery",
+    icon: <HardDrive className="h-10 w-10" />, 
+    title: "Disaster Recovery", 
     description: "Develop and implement disaster recovery strategies to keep your business running smoothly, even in unexpected situations."
   },
   {
-    icon: <Package2 className="h-10 w-10" />,
-    title: "Containerization & Orchestration",
+    icon: <Package2 className="h-10 w-10" />, 
+    title: "Containerization & Orchestration", 
     description: "Leverage Docker and Kubernetes for efficient container management, enabling seamless deployment and scaling of your applications."
   },
   {
-    icon: <Code className="h-10 w-10" />,
-    title: "Infrastructure as Code (IaC)",
+    icon: <Code className="h-10 w-10" />, 
+    title: "Infrastructure as Code (IaC)", 
     description: "Automate infrastructure deployment using tools like Terraform and AWS CDK, ensuring consistency and reducing setup times."
   },
   {
-    icon: <CloudCog className="h-10 w-10" />,
-    title: "Cloud Migration & Modernization",
+    icon: <CloudCog className="h-10 w-10" />, 
+    title: "Cloud Migration & Modernization", 
     description: "Assist businesses in migrating to the cloud or modernizing existing infrastructures, enhancing performance, and cutting costs."
   },
   {
-    icon: <Activity className="h-10 w-10" />,
-    title: "Performance Optimization",
+    icon: <Activity className="h-10 w-10" />, 
+    title: "Performance Optimization", 
     description: "Analyze and optimize your infrastructure and applications to improve speed, reliability, and user experience."
   },
   {
-    icon: <FileCheck className="h-10 w-10" />,
-    title: "Compliance & Governance",
+    icon: <FileCheck className="h-10 w-10" />, 
+    title: "Compliance & Governance", 
     description: "Ensure your infrastructure and applications meet industry standards and regulatory requirements through comprehensive audits and best practices."
+  },
+  {
+    icon: <Laptop className="h-10 w-10" />, 
+    title: "Web Development", 
+    description: "Build modern, responsive, and high-performance web applications tailored to your business needs using the latest technologies."
+  },
+  {
+    icon: <Smartphone className="h-10 w-10" />, 
+    title: "Mobile App Development", 
+    description: "Develop seamless and user-friendly mobile applications for iOS and Android platforms to enhance user engagement and business reach."
   }
 ];
 
