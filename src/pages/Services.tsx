@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { CloudCog, GitMerge, Cloud, Shield, BarChart, HardDrive, Package2, Code, MoveRight, Activity, FileCheck, Laptop, Smartphone } from "lucide-react";
+import { CloudCog, GitMerge, Cloud, Shield, BarChart, HardDrive, Package2, Layers,Code, MoveRight, Activity, FileCheck, Laptop, Smartphone } from "lucide-react";
 
 const servicesList = [
   {
@@ -58,6 +58,11 @@ const servicesList = [
     icon: <Laptop className="h-10 w-10" />, 
     title: "Web Development", 
     description: "Build modern, responsive, and high-performance web applications tailored to your business needs using the latest technologies."
+  },
+  {
+    icon: <Layers className="h-10 w-10" />, 
+    title: "Software Development", 
+    description: "Develop robust, custom software solutions tailored to your business needs."
   },
   {
     icon: <Smartphone className="h-10 w-10" />, 

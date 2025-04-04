@@ -14,7 +14,7 @@ const Hero = () => {
             
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-white animate-slide-down" style={{ animationDelay: "100ms" }}>
-            Streamline & Scale Your Business with Cutting-Edge DevOps, Cloud, & Software Solutions
+            Streamline & Scale Your Business with Cutting-Edge DevOps, & Software Solutions
             </h1>
             
             {/* Subtext */}

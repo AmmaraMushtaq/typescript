@@ -29,7 +29,8 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-lg text-white/80 mb-6 animate-fade-in">
-              My journey started with a deep dive into cloud architecture, automation, and full-stack development, working on projects like Sococo and Etisalat, where I streamlined deployments, secured cloud infrastructures, and built scalable applications. Seeing businesses struggle with inefficient pipelines, security gaps, and performance bottlenecks made me realize—this is where I thrive. I love tackling DevOps, DevSecOps, and Full-Stack challenges, transforming complex problems into bulletproof, high-performance solutions. From automating CI/CD in Chronicle to optimizing infrastructure in Improve the News and fortifying security in Carbonite, every project reinforced my passion. Now, through my consultancy, I help businesses scale securely, efficiently, and seamlessly with AWS. </p>
+                It all started with my deep dive into cloud architecture and automation while working on projects like Sococo and Etisalat, where I streamlined deployments and secured cloud infrastructures at scale.
+              </p>
               <p className="text-lg text-white/80 mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
                 Over the years, seeing businesses struggle with inefficient pipelines, security blind spots, and costly downtime made me realize—this is where I thrive. I love taking complex DevOps and DevSecOps challenges, breaking them down, and building bulletproof solutions, whether for startups or enterprises.
               </p>
@@ -40,17 +41,14 @@ const About = () => {
             
             <div className="bg-white/5 rounded-2xl p-8 border border-white/10 animate-fade-in" style={{ animationDelay: "300ms" }}>
               <h3 className="text-2xl font-display font-bold mb-6 text-white">Certifications & Experience</h3>
-              <p className="text-lg text-white/80 mb-6 animate-fade-in">
-              I hold several certifications, including AWS Certified Solutions Architect – Professional, Certified Kubernetes Administrator (CKA), and DevSecOps Specialist. My portfolio spans major projects that have strengthened my expertise:
-              </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="bg-white/10 p-3 rounded-full">
                     <Award className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Etisalat</h4>
-                    <p className="text-white/70">Engineered CI/CD pipelines, managed cloud infrastructure, and automated deployments.</p>
+                    <h4 className="text-lg font-semibold text-white mb-1">AWS Certified Solutions Architect – Professional</h4>
+                    <p className="text-white/70">Advanced cloud architecture and design</p>
                   </div>
                 </div>
                 
@@ -59,8 +57,8 @@ const About = () => {
                     <Award className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1"> Carbonite</h4>
-                    <p className="text-white/70">Fortified security protocols, ensured regulatory compliance, and optimized back-end performance.</p>
+                    <h4 className="text-lg font-semibold text-white mb-1"> Certified Cloud Practitioner </h4>
+                    <p className="text-white/70">Container orchestration expertise</p>
                   </div>
                 </div>
                 
@@ -69,17 +67,8 @@ const About = () => {
                     <Award className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1"> Chronicle</h4>
-                    <p className="text-white/70">Built scalable full-stack architecture and automated cloud workflows.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/10 p-3 rounded-full">
-                    <Award className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-1"> Improve the News</h4>
-                    <p className="text-white/70"> Developed high-performance web solutions with optimized content delivery & engagement.</p>
+                    <h4 className="text-lg font-semibold text-white mb-1"> Certified DevSecOps Specialist</h4>
+                    <p className="text-white/70">Security integration across development lifecycle</p>
                   </div>
                 </div>
               </div>

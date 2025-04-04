@@ -95,7 +95,7 @@ const SectorsPage = () => {
               Ready to Elevate Your Business?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-3xl mx-auto">
-              If you're looking for tailored DevOps & DevSecOps solutions to drive your business forward, I'm here to help. Let's discuss how my expertise can make a difference.
+              If you're looking for tailored DevOps & software solutions to drive your business forward, I'm here to help. Let's discuss how my expertise can make a difference.
             </p>
             <a 
               href="#contact" 

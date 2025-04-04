@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -9,13 +9,31 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
 
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node) &&
+        !buttonRef.current?.contains(e.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   const isActive = (path: string) =>
@@ -44,27 +62,44 @@ const Navbar = () => {
             About
           </Link>
 
-          {/* Dropdown for Solutions */}
-          <div
-            className="relative group"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
-          >
-            <button className="text-sm font-medium text-white/70 hover:text-white flex items-center gap-1">
-              Solutions <ChevronDown size={14} />
+          {/* Clickable Dropdown */}
+          <div className="relative">
+            <button
+              ref={buttonRef}
+              className="text-sm font-medium text-white/70 hover:text-white flex items-center gap-1"
+              onClick={() => setDropdownOpen(prev => !prev)}
+            >
+              <span className="w-full text-center">Solutions</span>
+              <ChevronDown size={14} />
             </button>
-            {dropdownOpen && (
-              <div className="absolute left-0 mt-2 w-40 bg-black/90 text-white shadow-lg rounded-md">
-                <Link to="/services" className="block px-4 py-2 text-sm hover:bg-white/20" onClick={() => setDropdownOpen(false)}>
-                  Services
-                </Link>
-                <Link to="/sectors" className="block px-4 py-2 text-sm hover:bg-white/20" onClick={() => setDropdownOpen(false)}>
-                  Sectors
-                </Link>
-              </div>
-            )}
-          </div>
 
+            <div
+              ref={dropdownRef}
+              className={cn(
+                "absolute left-0 mt-2 bg-black/90 text-white shadow-lg rounded-md overflow-hidden transition-all duration-300 transform scale-95 opacity-0",
+                dropdownOpen && "opacity-100 scale-100"
+              )}
+              style={{
+                width: buttonRef.current?.offsetWidth || "auto",
+                pointerEvents: dropdownOpen ? "auto" : "none",
+              }}
+            >
+              <Link
+                to="/services"
+                className="block px-4 py-2 text-sm text-center hover:bg-white/20"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                to="/sectors"
+                className="block px-4 py-2 text-sm text-center hover:bg-white/20"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Sectors
+              </Link>
+            </div>
+          </div>
 
           <Link to="/case-studies" className={cn("text-sm font-medium", isActive("/case-studies") ? "text-white" : "text-white/70 hover:text-white")}>
             Case Studies
@@ -75,14 +110,17 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Toggle */}
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden focus:outline-none text-white" aria-label="Toggle menu">
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
-      <div className={cn("fixed inset-0 bg-black/95 flex flex-col items-center justify-center transition-all duration-300 md:hidden", isOpen ? "opacity-100 z-40" : "opacity-0 -z-10")}>
+      <div className={cn(
+        "fixed inset-0 bg-black/95 flex flex-col items-center justify-center transition-all duration-300 md:hidden",
+        isOpen ? "opacity-100 z-40" : "opacity-0 -z-10"
+      )}>
         <nav className="flex flex-col items-center gap-6">
           <Link to="/" className={cn("text-lg font-medium", isActive("/") ? "text-white" : "text-white/70 hover:text-white")} onClick={closeMenu}>
             Home
@@ -91,7 +129,7 @@ const Navbar = () => {
             About
           </Link>
 
-          {/* Mobile Dropdown for Solutions */}
+          {/* Mobile Dropdown */}
           <details className="w-full text-center">
             <summary className="text-lg font-medium text-white/70 hover:text-white cursor-pointer">
               Solutions
@@ -105,8 +143,6 @@ const Navbar = () => {
               </Link>
             </div>
           </details>
-
-         
 
           <Link to="/case-studies" className={cn("text-lg font-medium", isActive("/case-studies") ? "text-white" : "text-white/70 hover:text-white")} onClick={closeMenu}>
             Case Studies
